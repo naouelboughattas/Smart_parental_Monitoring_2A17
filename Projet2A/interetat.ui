@@ -13,136 +13,254 @@
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
-  <widget class="QGroupBox" name="groupBox">
+  <widget class="QTabWidget" name="tabWidget">
    <property name="geometry">
     <rect>
-     <x>130</x>
-     <y>80</y>
-     <width>231</width>
-     <height>201</height>
+     <x>60</x>
+     <y>60</y>
+     <width>711</width>
+     <height>501</height>
     </rect>
    </property>
-   <property name="title">
-    <string>Ajouter Etat</string>
+   <property name="currentIndex">
+    <number>1</number>
    </property>
-   <widget class="QLabel" name="label">
-    <property name="geometry">
-     <rect>
-      <x>30</x>
-      <y>66</y>
-      <width>71</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Nom :</string>
-    </property>
+   <widget class="QWidget" name="tab">
+    <attribute name="title">
+     <string>Ajouter Etat</string>
+    </attribute>
+    <widget class="QGroupBox" name="groupBox">
+     <property name="geometry">
+      <rect>
+       <x>210</x>
+       <y>130</y>
+       <width>231</width>
+       <height>201</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>Ajouter Etat</string>
+     </property>
+     <widget class="QLabel" name="label">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>66</y>
+        <width>71</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Nom :</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="nom">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>70</y>
+        <width>113</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="ajouter">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>130</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Ajouter</string>
+      </property>
+     </widget>
+    </widget>
    </widget>
-   <widget class="QLineEdit" name="nom">
-    <property name="geometry">
-     <rect>
-      <x>100</x>
-      <y>70</y>
-      <width>113</width>
-      <height>20</height>
-     </rect>
-    </property>
+   <widget class="QWidget" name="tab_2">
+    <attribute name="title">
+     <string>Gerer Etat</string>
+    </attribute>
+    <widget class="QGroupBox" name="groupBox_2">
+     <property name="geometry">
+      <rect>
+       <x>370</x>
+       <y>20</y>
+       <width>231</width>
+       <height>201</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>Supprimer Etat</string>
+     </property>
+     <widget class="QPushButton" name="supprimer">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>140</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Supprimer</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="comboBox_supp">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>35</y>
+        <width>62</width>
+        <height>22</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_2">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>30</y>
+        <width>71</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>ID :</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_3">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>80</y>
+        <width>71</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Nom :</string>
+      </property>
+     </widget>
+     <widget class="QTextBrowser" name="nom_val">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>80</y>
+        <width>161</width>
+        <height>31</height>
+       </rect>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QTableView" name="tableetat">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>270</y>
+       <width>621</width>
+       <height>192</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QGroupBox" name="groupBox_3">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>20</y>
+       <width>231</width>
+       <height>201</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>Modifier Etat</string>
+     </property>
+     <widget class="QPushButton" name="modifier">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>140</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Modifier</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="comboBox_Modifier">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>35</y>
+        <width>62</width>
+        <height>22</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_4">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>30</y>
+        <width>71</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>ID :</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_5">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>80</y>
+        <width>71</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Nom :</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="nom_modif">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>80</y>
+        <width>141</width>
+        <height>31</height>
+       </rect>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QLineEdit" name="recherche">
+     <property name="geometry">
+      <rect>
+       <x>240</x>
+       <y>230</y>
+       <width>181</width>
+       <height>31</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_6">
+     <property name="geometry">
+      <rect>
+       <x>150</x>
+       <y>230</y>
+       <width>91</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Rechercher :</string>
+     </property>
+    </widget>
    </widget>
-   <widget class="QPushButton" name="ajouter">
-    <property name="geometry">
-     <rect>
-      <x>90</x>
-      <y>130</y>
-      <width>75</width>
-      <height>23</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Ajouter</string>
-    </property>
-   </widget>
-  </widget>
-  <widget class="QGroupBox" name="groupBox_2">
-   <property name="geometry">
-    <rect>
-     <x>440</x>
-     <y>80</y>
-     <width>231</width>
-     <height>201</height>
-    </rect>
-   </property>
-   <property name="title">
-    <string>Supprimer Etat</string>
-   </property>
-   <widget class="QPushButton" name="supprimer">
-    <property name="geometry">
-     <rect>
-      <x>80</x>
-      <y>140</y>
-      <width>75</width>
-      <height>23</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Supprimer</string>
-    </property>
-   </widget>
-   <widget class="QComboBox" name="comboBox">
-    <property name="geometry">
-     <rect>
-      <x>90</x>
-      <y>35</y>
-      <width>101</width>
-      <height>22</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_2">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>30</y>
-      <width>71</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>ID :</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_3">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>70</y>
-      <width>71</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Nom :</string>
-    </property>
-   </widget>
-   <widget class="QTextBrowser" name="nomaff">
-    <property name="geometry">
-     <rect>
-      <x>60</x>
-      <y>70</y>
-      <width>161</width>
-      <height>31</height>
-     </rect>
-    </property>
-   </widget>
-  </widget>
-  <widget class="QTableView" name="tableetat">
-   <property name="geometry">
-    <rect>
-     <x>260</x>
-     <y>320</y>
-     <width>256</width>
-     <height>192</height>
-    </rect>
-   </property>
   </widget>
  </widget>
  <resources/>

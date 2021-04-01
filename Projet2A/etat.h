@@ -15,16 +15,16 @@ public:
     Etat(int,QString);
     Etat(QString);
 
-    int get_Id();
-    QString get_Nom();
-
     bool ajouter();
     bool supprimer(int);
+    bool modifier(QString,QString);
 
     QSqlQueryModel * afficher();
-    QSqlTableModel * moodel();
-    QSqlQueryModel * remplircomboetat();
+    QSqlQueryModel * remplircomboevent();
     QSqlQuery request(QString);
+    QSqlQueryModel * requestnom();
+    QSqlQueryModel * afficherecherche(QString);
+
 
 private:
     int id;

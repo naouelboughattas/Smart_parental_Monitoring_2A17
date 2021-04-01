@@ -1,6 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "interetat.h"
+#include "modesinter.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -8,6 +9,8 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
     setWindowTitle("Home");
+
+
 }
 
 MainWindow::~MainWindow()
@@ -26,5 +29,8 @@ void MainWindow::on_pushButton_clicked()
 
 void MainWindow::on_pushButton_2_clicked()
 {
+    modesinter e;
+    e.setModal(true);
+    e.exec();
 
 }

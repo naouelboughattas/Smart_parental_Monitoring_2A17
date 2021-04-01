@@ -1,4 +1,4 @@
-QT       += core gui sql
+QT       += core gui sql printsupport charts network multimedia
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -20,17 +20,26 @@ SOURCES += \
     etat.cpp \
     interetat.cpp \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    modes.cpp \
+    modesinter.cpp \
+    smtp.cpp \
+    tableprinter.cpp
 
 HEADERS += \
     connection.h \
     etat.h \
     interetat.h \
-    mainwindow.h
+    mainwindow.h \
+    modes.h \
+    modesinter.h \
+    smtp.h \
+    tableprinter.h
 
 FORMS += \
     interetat.ui \
-    mainwindow.ui
+    mainwindow.ui \
+    modesinter.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

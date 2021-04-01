@@ -24,9 +24,6 @@ Etat::Etat(QString nom)
     this->nom=nom;
 }
 
-//GETTERS
-int Etat::get_Id(){return  id;}
-QString Etat::get_Nom(){return  nom;}
 
 
 //*******AJOUTER
@@ -47,8 +44,7 @@ return    query.exec();
 //******AFFICHER
 
 QSqlQueryModel * Etat::afficher()
-{
-    QSqlQueryModel * model= new QSqlQueryModel();
+{QSqlQueryModel * model= new QSqlQueryModel();
 
 model->setQuery("select * from ETAT");
 model->setHeaderData(0, Qt::Horizontal, QObject::tr("id"));
@@ -69,24 +65,9 @@ query.bindValue(":id", res);
 return    query.exec();
 }
 
-
-//******MODEL
-
-QSqlTableModel * Etat::moodel()
-{
-    QSqlTableModel * model  =new QSqlTableModel();
-
-model->setTable("ETAT");
-model->select();
-model->setHeaderData(0, Qt::Horizontal, QObject::tr("Id"));
-model->setHeaderData(1, Qt::Horizontal, QObject::tr("Nom"));
-
-return model;
-}
-
 //******REMPLIR COMBO BOX
 
-QSqlQueryModel * Etat::remplircomboetat()
+QSqlQueryModel * Etat::remplircomboevent()
 {
     QSqlQueryModel * mod= new QSqlQueryModel();
     QSqlQuery query;
@@ -107,3 +88,47 @@ QSqlQuery Etat::request(QString id)
 }
 
 
+//*******MODIFIER
+
+bool Etat::modifier(QString nom,QString id)
+{
+QSqlQuery query;
+
+query.prepare("UPDATE ETAT SET nom= :nom"
+                    " WHERE  ID = :id ");
+
+
+query.bindValue(":id", id);
+query.bindValue(":nom", nom);
+
+return    query.exec();
+}
+
+QSqlQueryModel * Etat::requestnom()
+{
+
+    QSqlQueryModel * mod= new QSqlQueryModel();
+    QSqlQuery query;
+    query.prepare("select NOM from ETAT");
+    query.exec();
+    mod->setQuery(query);
+    return mod;
+
+}
+
+
+//******RECHERCHE AVANCEE
+
+QSqlQueryModel * Etat::afficherecherche(QString res)
+{
+    QSqlQueryModel * model= new QSqlQueryModel();
+    QSqlQuery query;
+    query.prepare("select * from etat  where (NOM LIKE '%"+res+"%' )");
+    query.exec();
+    model->setQuery(query);
+    model->setHeaderData(0, Qt::Horizontal, QObject::tr("id"));
+    model->setHeaderData(1, Qt::Horizontal, QObject::tr("nom"));
+
+
+    return model;
+}

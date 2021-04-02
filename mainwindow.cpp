@@ -10,6 +10,7 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
     ui->tableView->setModel(Etmp.afficher());
+     ui->tableView_2->setModel(Et.afficher2());
 }
 
 MainWindow::~MainWindow()
@@ -85,7 +86,7 @@ void MainWindow::on_pb_ajouter_2_clicked()
    bool test=e.ajouter2();
     if(test)
     {
-         ui->tableView->setModel(Et.afficher2());
+         ui->tableView_2->setModel(Et.afficher2());
         QMessageBox::information(nullptr,QObject::tr ("ok"),
                                  QObject::tr ("ajout effectué\n"
 "click Cancel to exit ."), QMessageBox::Cancel);
@@ -105,7 +106,7 @@ void MainWindow::on_modifier_2_clicked()
    bool test=e.modifier2();
     if(test)
     {
-         ui->tableView->setModel(Et.afficher2());
+         ui->tableView_2->setModel(Et.afficher2());
         QMessageBox::information(nullptr,QObject::tr ("ok"),
                                  QObject::tr ("modification effectué\n"
 "click Cancel to exit ."), QMessageBox::Cancel);
@@ -122,7 +123,7 @@ void MainWindow::on_suprrimer_2_clicked()
     bool test =Et.supprimer2(num);
     if (test)
     {
-         ui->tableView->setModel(Et.afficher2());
+         ui->tableView_2->setModel(Et.afficher2());
         QMessageBox::information(nullptr,QObject::tr ("ok"),
                                  QObject::tr ("suppression effectué\n"
 "click Cancel to exit ."), QMessageBox::Cancel);

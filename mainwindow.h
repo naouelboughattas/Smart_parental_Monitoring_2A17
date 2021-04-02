@@ -1,7 +1,7 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 #include "chambres.h"
-
+#include "etages.h"
 #include <QMainWindow>
 
 namespace Ui {
@@ -24,9 +24,16 @@ private slots:
     void on_modifier_clicked();
 
 
+    void on_pb_ajouter_2_clicked();
+
+    void on_modifier_2_clicked();
+
+    void on_suprrimer_2_clicked();
+
 private:
     Ui::MainWindow *ui;
     Chambres Etmp ;
+    Etages Et ;
 };
 
 #endif // MAINWINDOW_H

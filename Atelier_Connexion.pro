@@ -27,12 +27,14 @@ CONFIG += c++11
 
 SOURCES += \
     chambres.cpp \
+    etages.cpp \
         main.cpp \
         mainwindow.cpp \
     connection.cpp
 
 HEADERS += \
     chambres.h \
+    etages.h \
         mainwindow.h \
     connection.h
 

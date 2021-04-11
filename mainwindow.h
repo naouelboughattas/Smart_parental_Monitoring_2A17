@@ -3,7 +3,9 @@
 #include "chambres.h"
 #include "etages.h"
 #include <QMainWindow>
-
+#include <QSortFilterProxyModel>
+#include<QPainter>
+#include<QFileDialog>
 namespace Ui {
 class MainWindow;
 }
@@ -30,10 +32,28 @@ private slots:
 
     void on_suprrimer_2_clicked();
 
+    void on_pushButton_sort_clicked();
+
+    void on_pushButton_sort_2_clicked();
+
+    void on_pushButton_search_clicked();
+
+    void on_pushButton_search_2_clicked();
+
+    void on_pushButton_3_clicked();
+
+    void on_pushButton_4_clicked();
+
+
+    void on_pushButton_clicked();
+
 private:
     Ui::MainWindow *ui;
     Chambres Etmp ;
     Etages Et ;
+
+    QSortFilterProxyModel proxyModelEtmp;
+    QSortFilterProxyModel proxyModelEt;
 };
 
 #endif // MAINWINDOW_H

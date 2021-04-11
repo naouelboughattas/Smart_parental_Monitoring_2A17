@@ -1,4 +1,5 @@
 #include "chambres.h"
+#include <QDebug>
 
 Chambres::Chambres(int num,QString nom)
 {
@@ -47,4 +48,22 @@ bool Chambres::modifier()
 
     query.bindValue(":nom",nom);
     return query.exec();
+}
+
+QSqlQueryModel * Chambres::search()
+{
+    QSqlQueryModel * model = new QSqlQueryModel () ;
+    qDebug()<<QString("nom = %1, num = %2").arg(nom, QString::number(num));
+    if(num != -1){
+        model-> setQuery(QString("select *from chambres where NOM like '%%1%' and \
+     NUM = %2 order by NOM;").arg(nom, QString::number(num)));
+    }else{
+        model-> setQuery(QString("select *from chambres where NOM like '%%1%' \
+    order by NOM;").arg(nom));
+    }
+
+    model-> setHeaderData(0,Qt::Horizontal,QObject::tr("NUM"));
+    model-> setHeaderData(1,Qt::Horizontal,QObject::tr("NOM"));
+
+    return model;
 }

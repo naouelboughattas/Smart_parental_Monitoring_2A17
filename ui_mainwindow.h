@@ -40,6 +40,7 @@ public:
     QLineEdit *le_num;
     QLineEdit *le_nom;
     QPushButton *pb_ajouter;
+    QPushButton *Sonrechech_3;
     QGroupBox *groupBox_2;
     QLineEdit *le_num2;
     QLineEdit *le_nom2;
@@ -48,15 +49,18 @@ public:
     QLabel *label_9;
     QLabel *label_8;
     QPushButton *modifier;
+    QPushButton *Sonrechech_4;
     QGroupBox *groupBox_3;
     QLabel *label_14;
     QLineEdit *num;
     QPushButton *suprrimer;
+    QPushButton *Sonrechech_5;
     QTableView *tableView;
     QGroupBox *groupBox_10;
     QLabel *label_34;
     QComboBox *comboBox;
     QPushButton *pushButton_sort;
+    QPushButton *Sonrechech_2;
     QGroupBox *groupBox_11;
     QLineEdit *lineEdit_search_num;
     QLineEdit *lineEdit_search_nom;
@@ -64,6 +68,7 @@ public:
     QLabel *label_35;
     QLabel *label_36;
     QLabel *label_37;
+    QPushButton *Sonrechech;
     QPushButton *pushButton_3;
     QWidget *tab_2;
     QGroupBox *groupBox_5;
@@ -73,6 +78,7 @@ public:
     QLineEdit *le_type_2;
     QLabel *label_11;
     QPushButton *pb_ajouter_2;
+    QPushButton *Sonrechech_8;
     QGroupBox *groupBox_4;
     QLineEdit *le_num2_2;
     QPushButton *modifier_2;
@@ -81,16 +87,19 @@ public:
     QLabel *label_16;
     QLabel *label_17;
     QLabel *label_18;
+    QPushButton *Sonrechech_9;
     QTableView *tableView_2;
     QPushButton *pushButton_4;
     QGroupBox *groupBox_6;
     QLabel *label_19;
     QLineEdit *num_2;
     QPushButton *suprrimer_2;
+    QPushButton *Sonrechech_10;
     QGroupBox *groupBox_8;
     QLabel *label_20;
     QComboBox *comboBox_2;
     QPushButton *pushButton_sort_2;
+    QPushButton *Sonrechech_7;
     QGroupBox *groupBox_9;
     QLineEdit *lineEdit_search_num_2;
     QLineEdit *lineEdit_search_nom_2;
@@ -98,6 +107,7 @@ public:
     QLabel *label_10;
     QLabel *label_12;
     QLabel *label_30;
+    QPushButton *Sonrechech_6;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -113,13 +123,13 @@ public:
         centralwidget->setStyleSheet(QStringLiteral(""));
         tabWidget = new QTabWidget(centralwidget);
         tabWidget->setObjectName(QStringLiteral("tabWidget"));
-        tabWidget->setGeometry(QRect(10, 10, 931, 931));
+        tabWidget->setGeometry(QRect(10, 0, 931, 931));
         tabWidget->setStyleSheet(QStringLiteral("background-color: rgb(221, 255, 236);"));
         tab = new QWidget();
         tab->setObjectName(QStringLiteral("tab"));
         groupBox = new QGroupBox(tab);
         groupBox->setObjectName(QStringLiteral("groupBox"));
-        groupBox->setGeometry(QRect(130, 420, 271, 171));
+        groupBox->setGeometry(QRect(120, 410, 271, 171));
         groupBox->setStyleSheet(QStringLiteral(""));
         label = new QLabel(groupBox);
         label->setObjectName(QStringLiteral("label"));
@@ -155,15 +165,19 @@ public:
 "	top:0px;\n"
 "\n"
 ""));
+        Sonrechech_3 = new QPushButton(groupBox);
+        Sonrechech_3->setObjectName(QStringLiteral("Sonrechech_3"));
+        Sonrechech_3->setGeometry(QRect(230, 10, 31, 41));
+        Sonrechech_3->setStyleSheet(QStringLiteral("background-image: url(C:/Users/Lenovo/Desktop/son.jpg);"));
         groupBox_2 = new QGroupBox(tab);
         groupBox_2->setObjectName(QStringLiteral("groupBox_2"));
-        groupBox_2->setGeometry(QRect(410, 420, 261, 171));
+        groupBox_2->setGeometry(QRect(410, 410, 281, 171));
         le_num2 = new QLineEdit(groupBox_2);
         le_num2->setObjectName(QStringLiteral("le_num2"));
-        le_num2->setGeometry(QRect(130, 40, 113, 20));
+        le_num2->setGeometry(QRect(130, 50, 113, 20));
         le_nom2 = new QLineEdit(groupBox_2);
         le_nom2->setObjectName(QStringLiteral("le_nom2"));
-        le_nom2->setGeometry(QRect(130, 90, 113, 20));
+        le_nom2->setGeometry(QRect(132, 100, 111, 20));
         label_6 = new QLabel(groupBox_2);
         label_6->setObjectName(QStringLiteral("label_6"));
         label_6->setGeometry(QRect(-140, 40, 101, 16));
@@ -172,10 +186,10 @@ public:
         label_7->setGeometry(QRect(-130, 90, 101, 16));
         label_9 = new QLabel(groupBox_2);
         label_9->setObjectName(QStringLiteral("label_9"));
-        label_9->setGeometry(QRect(20, 40, 91, 20));
+        label_9->setGeometry(QRect(20, 50, 91, 20));
         label_8 = new QLabel(groupBox_2);
         label_8->setObjectName(QStringLiteral("label_8"));
-        label_8->setGeometry(QRect(30, 90, 101, 20));
+        label_8->setGeometry(QRect(30, 100, 101, 20));
         modifier = new QPushButton(groupBox_2);
         modifier->setObjectName(QStringLiteral("modifier"));
         modifier->setGeometry(QRect(170, 130, 81, 31));
@@ -199,9 +213,13 @@ public:
 "\n"
 "	position:relative;\n"
 "	top:0px;"));
+        Sonrechech_4 = new QPushButton(groupBox_2);
+        Sonrechech_4->setObjectName(QStringLiteral("Sonrechech_4"));
+        Sonrechech_4->setGeometry(QRect(250, 10, 31, 41));
+        Sonrechech_4->setStyleSheet(QStringLiteral("background-image: url(C:/Users/Lenovo/Desktop/son.jpg);"));
         groupBox_3 = new QGroupBox(tab);
         groupBox_3->setObjectName(QStringLiteral("groupBox_3"));
-        groupBox_3->setGeometry(QRect(170, 610, 471, 61));
+        groupBox_3->setGeometry(QRect(150, 600, 511, 71));
         groupBox_3->setStyleSheet(QStringLiteral(""));
         label_14 = new QLabel(groupBox_3);
         label_14->setObjectName(QStringLiteral("label_14"));
@@ -211,7 +229,7 @@ public:
         num->setGeometry(QRect(180, 30, 113, 20));
         suprrimer = new QPushButton(groupBox_3);
         suprrimer->setObjectName(QStringLiteral("suprrimer"));
-        suprrimer->setGeometry(QRect(360, 20, 101, 31));
+        suprrimer->setGeometry(QRect(340, 30, 101, 31));
         suprrimer->setStyleSheet(QLatin1String("box-shadow: 0px 1px 16px -49px #667580;\n"
 "	background:linear-gradient(to bottom, #7892c2 5%, #667580 100%);\n"
 "	background-color:#7892c2;\n"
@@ -232,6 +250,10 @@ public:
 "\n"
 "	position:relative;\n"
 "	top:0px;"));
+        Sonrechech_5 = new QPushButton(groupBox_3);
+        Sonrechech_5->setObjectName(QStringLiteral("Sonrechech_5"));
+        Sonrechech_5->setGeometry(QRect(470, 10, 31, 41));
+        Sonrechech_5->setStyleSheet(QStringLiteral("background-image: url(C:/Users/Lenovo/Desktop/son.jpg);"));
         tableView = new QTableView(tab);
         tableView->setObjectName(QStringLiteral("tableView"));
         tableView->setGeometry(QRect(90, 190, 621, 211));
@@ -270,18 +292,22 @@ public:
 "\n"
 "	position:relative;\n"
 "	top:0px;"));
+        Sonrechech_2 = new QPushButton(groupBox_10);
+        Sonrechech_2->setObjectName(QStringLiteral("Sonrechech_2"));
+        Sonrechech_2->setGeometry(QRect(220, 10, 31, 41));
+        Sonrechech_2->setStyleSheet(QStringLiteral("background-image: url(C:/Users/Lenovo/Desktop/son.jpg);"));
         groupBox_11 = new QGroupBox(tab);
         groupBox_11->setObjectName(QStringLiteral("groupBox_11"));
-        groupBox_11->setGeometry(QRect(130, 10, 261, 171));
+        groupBox_11->setGeometry(QRect(140, 10, 261, 171));
         groupBox_11->setStyleSheet(QStringLiteral(""));
         lineEdit_search_num = new QLineEdit(groupBox_11);
         lineEdit_search_num->setObjectName(QStringLiteral("lineEdit_search_num"));
         lineEdit_search_num->setGeometry(QRect(110, 50, 131, 20));
-        lineEdit_search_num->setStyleSheet(QStringLiteral("background-color: rgb(255, 255, 255);"));
+        lineEdit_search_num->setStyleSheet(QStringLiteral(""));
         lineEdit_search_nom = new QLineEdit(groupBox_11);
         lineEdit_search_nom->setObjectName(QStringLiteral("lineEdit_search_nom"));
         lineEdit_search_nom->setGeometry(QRect(110, 90, 131, 20));
-        lineEdit_search_nom->setStyleSheet(QStringLiteral("background-color: rgb(255, 255, 255);"));
+        lineEdit_search_nom->setStyleSheet(QStringLiteral(""));
         pushButton_search = new QPushButton(groupBox_11);
         pushButton_search->setObjectName(QStringLiteral("pushButton_search"));
         pushButton_search->setGeometry(QRect(140, 130, 101, 31));
@@ -310,10 +336,14 @@ public:
         label_35->setGeometry(QRect(10, 50, 91, 20));
         label_36 = new QLabel(groupBox_11);
         label_36->setObjectName(QStringLiteral("label_36"));
-        label_36->setGeometry(QRect(10, 90, 101, 20));
+        label_36->setGeometry(QRect(10, 90, 91, 20));
         label_37 = new QLabel(groupBox_11);
         label_37->setObjectName(QStringLiteral("label_37"));
         label_37->setGeometry(QRect(30, 20, 211, 13));
+        Sonrechech = new QPushButton(groupBox_11);
+        Sonrechech->setObjectName(QStringLiteral("Sonrechech"));
+        Sonrechech->setGeometry(QRect(210, 10, 31, 41));
+        Sonrechech->setStyleSheet(QStringLiteral("background-image: url(C:/Users/Lenovo/Desktop/son.jpg);"));
         pushButton_3 = new QPushButton(tab);
         pushButton_3->setObjectName(QStringLiteral("pushButton_3"));
         pushButton_3->setGeometry(QRect(640, 330, 51, 51));
@@ -364,9 +394,13 @@ public:
 "	top:0px;\n"
 "\n"
 ""));
+        Sonrechech_8 = new QPushButton(groupBox_5);
+        Sonrechech_8->setObjectName(QStringLiteral("Sonrechech_8"));
+        Sonrechech_8->setGeometry(QRect(250, 10, 31, 41));
+        Sonrechech_8->setStyleSheet(QStringLiteral("background-image: url(C:/Users/Lenovo/Desktop/son.jpg);"));
         groupBox_4 = new QGroupBox(tab_2);
         groupBox_4->setObjectName(QStringLiteral("groupBox_4"));
-        groupBox_4->setGeometry(QRect(420, 410, 261, 171));
+        groupBox_4->setGeometry(QRect(420, 410, 281, 171));
         groupBox_4->setStyleSheet(QStringLiteral(""));
         le_num2_2 = new QLineEdit(groupBox_4);
         le_num2_2->setObjectName(QStringLiteral("le_num2_2"));
@@ -409,6 +443,10 @@ public:
         label_18 = new QLabel(groupBox_4);
         label_18->setObjectName(QStringLiteral("label_18"));
         label_18->setGeometry(QRect(30, 80, 81, 20));
+        Sonrechech_9 = new QPushButton(groupBox_4);
+        Sonrechech_9->setObjectName(QStringLiteral("Sonrechech_9"));
+        Sonrechech_9->setGeometry(QRect(250, 10, 31, 41));
+        Sonrechech_9->setStyleSheet(QStringLiteral("background-image: url(C:/Users/Lenovo/Desktop/son.jpg);"));
         tableView_2 = new QTableView(tab_2);
         tableView_2->setObjectName(QStringLiteral("tableView_2"));
         tableView_2->setGeometry(QRect(90, 190, 631, 201));
@@ -431,7 +469,7 @@ public:
         num_2->setGeometry(QRect(200, 30, 113, 20));
         suprrimer_2 = new QPushButton(groupBox_6);
         suprrimer_2->setObjectName(QStringLiteral("suprrimer_2"));
-        suprrimer_2->setGeometry(QRect(380, 20, 101, 31));
+        suprrimer_2->setGeometry(QRect(340, 30, 101, 31));
         suprrimer_2->setStyleSheet(QLatin1String("box-shadow: 0px 1px 16px -49px #667580;\n"
 "	background:linear-gradient(to bottom, #7892c2 5%, #667580 100%);\n"
 "	background-color:#7892c2;\n"
@@ -452,6 +490,10 @@ public:
 "\n"
 "	position:relative;\n"
 "	top:0px;"));
+        Sonrechech_10 = new QPushButton(groupBox_6);
+        Sonrechech_10->setObjectName(QStringLiteral("Sonrechech_10"));
+        Sonrechech_10->setGeometry(QRect(460, 10, 31, 41));
+        Sonrechech_10->setStyleSheet(QStringLiteral("background-image: url(C:/Users/Lenovo/Desktop/son.jpg);"));
         groupBox_8 = new QGroupBox(tab_2);
         groupBox_8->setObjectName(QStringLiteral("groupBox_8"));
         groupBox_8->setGeometry(QRect(420, 10, 261, 171));
@@ -484,6 +526,10 @@ public:
 "\n"
 "	position:relative;\n"
 "	top:0px;"));
+        Sonrechech_7 = new QPushButton(groupBox_8);
+        Sonrechech_7->setObjectName(QStringLiteral("Sonrechech_7"));
+        Sonrechech_7->setGeometry(QRect(220, 10, 31, 41));
+        Sonrechech_7->setStyleSheet(QStringLiteral("background-image: url(C:/Users/Lenovo/Desktop/son.jpg);"));
         groupBox_9 = new QGroupBox(tab_2);
         groupBox_9->setObjectName(QStringLiteral("groupBox_9"));
         groupBox_9->setGeometry(QRect(130, 10, 261, 171));
@@ -499,7 +545,7 @@ public:
         pushButton_search_2 = new QPushButton(groupBox_9);
         pushButton_search_2->setObjectName(QStringLiteral("pushButton_search_2"));
         pushButton_search_2->setGeometry(QRect(140, 130, 101, 31));
-        pushButton_search_2->setStyleSheet(QLatin1String("box-shadow: 0px 1px 16px -49px #667580;\n"
+        pushButton_search_2->setStyleSheet(QLatin1String("    box-shadow: 0px 1px 16px -49px #667580;\n"
 "	background:linear-gradient(to bottom, #7892c2 5%, #667580 100%);\n"
 "	background-color:#7892c2;\n"
 "	border-radius:14px;\n"
@@ -509,12 +555,11 @@ public:
 "	color:#ffffff;\n"
 "	font-family:Arial;\n"
 "	font-size:12px;\n"
-"font-weight:blod;\n"
+"   font-weight:blod;\n"
 "	padding:9px 19px;\n"
 "	text-decoration:none;\n"
 "	text-shadow:0px 1px 10px #283966;\n"
-"\n"
-"	background:linear-gradient(to bottom, #476e9e 5%, #667580 100%);\n"
+"     background:linear-gradient(to bottom, #476e9e 5%, #667580 100%);\n"
 "	background-color:#78250c;\n"
 "\n"
 "	position:relative;\n"
@@ -528,6 +573,10 @@ public:
         label_30 = new QLabel(groupBox_9);
         label_30->setObjectName(QStringLiteral("label_30"));
         label_30->setGeometry(QRect(20, 20, 211, 13));
+        Sonrechech_6 = new QPushButton(groupBox_9);
+        Sonrechech_6->setObjectName(QStringLiteral("Sonrechech_6"));
+        Sonrechech_6->setGeometry(QRect(220, 10, 31, 41));
+        Sonrechech_6->setStyleSheet(QStringLiteral("background-image: url(C:/Users/Lenovo/Desktop/son.jpg);"));
         tabWidget->addTab(tab_2, QString());
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
@@ -553,23 +602,28 @@ public:
         label->setText(QApplication::translate("MainWindow", "Num\303\251ro Chambre", Q_NULLPTR));
         label_2->setText(QApplication::translate("MainWindow", "Nom Chambre", Q_NULLPTR));
         pb_ajouter->setText(QApplication::translate("MainWindow", "Ajouter", Q_NULLPTR));
+        Sonrechech_3->setText(QString());
         groupBox_2->setTitle(QApplication::translate("MainWindow", "Modification", Q_NULLPTR));
         label_6->setText(QApplication::translate("MainWindow", "num\303\251ro chambre", Q_NULLPTR));
         label_7->setText(QApplication::translate("MainWindow", "nom chambre", Q_NULLPTR));
         label_9->setText(QApplication::translate("MainWindow", "Num\303\251ro Chambre", Q_NULLPTR));
         label_8->setText(QApplication::translate("MainWindow", "Nom Chambre", Q_NULLPTR));
         modifier->setText(QApplication::translate("MainWindow", "Modifier", Q_NULLPTR));
+        Sonrechech_4->setText(QString());
         groupBox_3->setTitle(QApplication::translate("MainWindow", "Supprission", Q_NULLPTR));
         label_14->setText(QApplication::translate("MainWindow", "Num\303\251ro Chambre", Q_NULLPTR));
         suprrimer->setText(QApplication::translate("MainWindow", "Supprimer", Q_NULLPTR));
+        Sonrechech_5->setText(QString());
         groupBox_10->setTitle(QApplication::translate("MainWindow", "Mise en ordre", Q_NULLPTR));
         label_34->setText(QApplication::translate("MainWindow", "Entrer le type de tri : ", Q_NULLPTR));
         pushButton_sort->setText(QApplication::translate("MainWindow", "Ordonner", Q_NULLPTR));
+        Sonrechech_2->setText(QString());
         groupBox_11->setTitle(QApplication::translate("MainWindow", "Recherche", Q_NULLPTR));
         pushButton_search->setText(QApplication::translate("MainWindow", "Rechercher", Q_NULLPTR));
         label_35->setText(QApplication::translate("MainWindow", "Num\303\251ro Chambre", Q_NULLPTR));
         label_36->setText(QApplication::translate("MainWindow", "Nom Chambre", Q_NULLPTR));
         label_37->setText(QApplication::translate("MainWindow", "Enter ici le : ", Q_NULLPTR));
+        Sonrechech->setText(QString());
         pushButton_3->setText(QString());
         tabWidget->setTabText(tabWidget->indexOf(tab), QApplication::translate("MainWindow", "G\303\251rer les chambres", Q_NULLPTR));
         groupBox_5->setTitle(QApplication::translate("MainWindow", "Ajout", Q_NULLPTR));
@@ -579,24 +633,29 @@ public:
         le_type_2->setText(QString());
         label_11->setText(QApplication::translate("MainWindow", "type \303\251tage", Q_NULLPTR));
         pb_ajouter_2->setText(QApplication::translate("MainWindow", "Ajouter", Q_NULLPTR));
+        Sonrechech_8->setText(QString());
         groupBox_4->setTitle(QApplication::translate("MainWindow", "Modification", Q_NULLPTR));
         modifier_2->setText(QApplication::translate("MainWindow", "Modifier", Q_NULLPTR));
         label_15->setText(QApplication::translate("MainWindow", "num\303\251ro chambre", Q_NULLPTR));
         label_16->setText(QApplication::translate("MainWindow", "nom chambre", Q_NULLPTR));
         label_17->setText(QApplication::translate("MainWindow", "Num\303\251ro \303\251tage", Q_NULLPTR));
         label_18->setText(QApplication::translate("MainWindow", "Type \303\251tage", Q_NULLPTR));
+        Sonrechech_9->setText(QString());
         pushButton_4->setText(QString());
         groupBox_6->setTitle(QApplication::translate("MainWindow", "Supprission", Q_NULLPTR));
         label_19->setText(QApplication::translate("MainWindow", "Num\303\251ro \303\251tage", Q_NULLPTR));
         suprrimer_2->setText(QApplication::translate("MainWindow", "Supprimer", Q_NULLPTR));
+        Sonrechech_10->setText(QString());
         groupBox_8->setTitle(QApplication::translate("MainWindow", "Mise en ordre", Q_NULLPTR));
         label_20->setText(QApplication::translate("MainWindow", "Entrer le type de tri : ", Q_NULLPTR));
         pushButton_sort_2->setText(QApplication::translate("MainWindow", "Ordonner", Q_NULLPTR));
+        Sonrechech_7->setText(QString());
         groupBox_9->setTitle(QApplication::translate("MainWindow", "Recherche", Q_NULLPTR));
         pushButton_search_2->setText(QApplication::translate("MainWindow", "Rechercher", Q_NULLPTR));
         label_10->setText(QApplication::translate("MainWindow", "Num\303\251ro \303\251tage", Q_NULLPTR));
         label_12->setText(QApplication::translate("MainWindow", "Type \303\251tage", Q_NULLPTR));
         label_30->setText(QApplication::translate("MainWindow", "Enter ici le : ", Q_NULLPTR));
+        Sonrechech_6->setText(QString());
         tabWidget->setTabText(tabWidget->indexOf(tab_2), QApplication::translate("MainWindow", "G\303\251rer les \303\251tages", Q_NULLPTR));
     } // retranslateUi
 

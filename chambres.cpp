@@ -32,6 +32,7 @@ return model;
 bool Chambres ::supprimer(int num)
 {
 QSqlQuery query ;
+//convertir num type numbre en chaine dans res s
 QString res = QString::number(num);
 query.prepare("Delete from chambres where NUM = :num");
 query.bindValue(":num",res);

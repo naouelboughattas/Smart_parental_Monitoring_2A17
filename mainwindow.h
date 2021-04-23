@@ -6,6 +6,7 @@
 #include <QSortFilterProxyModel>
 #include<QPainter>
 #include<QFileDialog>
+#include<QMediaPlayer>
 namespace Ui {
 class MainWindow;
 }
@@ -47,6 +48,28 @@ private slots:
 
     void on_pushButton_clicked();
 
+    void on_pushButton_search_3_clicked();
+
+    void on_Sonrechech_clicked();
+
+    void on_Sonrechech_2_clicked();
+
+    void on_Sonrechech_3_clicked();
+
+    void on_Sonrechech_4_clicked();
+
+    void on_Sonrechech_5_clicked();
+
+    void on_Sonrechech_6_clicked();
+
+    void on_Sonrechech_7_clicked();
+
+    void on_Sonrechech_8_clicked();
+
+    void on_Sonrechech_9_clicked();
+
+    void on_Sonrechech_10_clicked();
+
 private:
     Ui::MainWindow *ui;
     Chambres Etmp ;
@@ -54,6 +77,7 @@ private:
 
     QSortFilterProxyModel proxyModelEtmp;
     QSortFilterProxyModel proxyModelEt;
+    QMediaPlayer*player;
 };
 
 #endif // MAINWINDOW_H

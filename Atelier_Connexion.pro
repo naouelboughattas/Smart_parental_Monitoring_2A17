@@ -3,12 +3,16 @@
 # Project created by QtCreator 2018-10-26T21:45:23
 #
 #-------------------------------------------------
+#accés base de donnés
 QT +=  sql
 CONFIG += console
-QT       += core gui sql
+#son
+QT += core gui multimedia
+#mailll
 
 QT       += core network
 TARGET = SMTPEmail
+#pdf
 QT += core gui sql axcontainer printsupport
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 

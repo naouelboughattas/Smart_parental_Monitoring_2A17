@@ -10,6 +10,7 @@
 #include <QTextStream>
 #include <QTextDocument>
 #include<SmtpMime>
+#include <QMediaPlayer>
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
@@ -23,7 +24,7 @@ MainWindow::MainWindow(QWidget *parent) :
     columns << "Ascendant(0-9)" <<"Descendant (9-0)"<<"Ascendant(a-z)" <<"Descendant(z-a)";
     ui->comboBox->addItems(columns);
     ui->comboBox_2->addItems(columns);
-
+player = new QMediaPlayer (this);
 }
 
 MainWindow::~MainWindow()
@@ -39,6 +40,7 @@ void MainWindow::on_pb_ajouter_clicked()
    bool test=ch.ajouter();
     if(test)
     {
+        //affichage de l'ajout sur table views
         proxyModelEtmp.setSourceModel(Etmp.afficher());
          ui->tableView->setModel(&proxyModelEtmp);
         QMessageBox::information(nullptr,QObject::tr ("ok"),
@@ -49,6 +51,8 @@ void MainWindow::on_pb_ajouter_clicked()
         QMessageBox::critical(nullptr,QObject::tr ("not ok"),
                                  QObject::tr ("ajout non effectué\n"
 "click Cancel to exit ."), QMessageBox::Cancel);
+    //******************Mailing
+
     SmtpClient smtp("smtp.gmail.com", 465, SmtpClient::SslConnection);
          smtp.setUser("amaltr21@gmail.com");
          smtp.setPassword("52636447");
@@ -262,9 +266,9 @@ void MainWindow::on_pushButton_sort_clicked()
              break;
      }
 
-    QMessageBox::information(nullptr,QObject::tr ("ok"),
-                             QObject::tr ("ajout effectué\n"
-"click Cancel to exit ."), QMessageBox::Cancel);
+    //QMessageBox::information(nullptr,QObject::tr ("ok"),
+                            // QObject::tr ("ajout effectué\n"
+//"click Cancel to exit ."), QMessageBox::Cancel);
 }
 
 void MainWindow::on_pushButton_sort_2_clicked()
@@ -289,9 +293,9 @@ void MainWindow::on_pushButton_sort_2_clicked()
              break;
      }
 
-   QMessageBox::information(nullptr,QObject::tr ("ok"),
-                            QObject::tr ("ajout effectué\n"
-"click Cancel to exit ."), QMessageBox::Cancel);
+  // QMessageBox::information(nullptr,QObject::tr ("ok"),
+                           // QObject::tr ("ajout effectué\n"
+//"click Cancel to exit ."), QMessageBox::Cancel);
 }
 
 void MainWindow::on_pushButton_search_clicked()
@@ -303,9 +307,10 @@ void MainWindow::on_pushButton_search_clicked()
    Etmp.setnom(nom);
    proxyModelEtmp.setSourceModel(Etmp.search());
     ui->tableView->setModel(&proxyModelEtmp);
-   QMessageBox::information(nullptr,QObject::tr ("ok"),
-                            QObject::tr ("ajout effectué\n"
-"click Cancel to exit ."), QMessageBox::Cancel);
+  //* QMessageBox::information(nullptr,QObject::tr ("ok"),
+                            //QObject::tr ("ajout effectué\n"
+//"click Cancel to exit ."), QMessageBox::Cancel);
+
 }
 
 void MainWindow::on_pushButton_search_2_clicked()
@@ -317,10 +322,15 @@ void MainWindow::on_pushButton_search_2_clicked()
    Et.settype(nom);
    proxyModelEt.setSourceModel(Et.search());
     ui->tableView_2->setModel(&proxyModelEt);
-   QMessageBox::information(nullptr,QObject::tr ("ok"),
-                            QObject::tr ("ajout effectué\n"
-"click Cancel to exit ."), QMessageBox::Cancel);
+   //QMessageBox::information(nullptr,QObject::tr ("ok"),
+                         //   QObject::tr ("ajout effectué\n"
+//"click Cancel to exit ."), QMessageBox::Cancel);
 }
+
+
+
+//**************************************************************pdf
+
 
 void MainWindow::on_pushButton_3_clicked()
 {
@@ -351,6 +361,8 @@ void MainWindow::on_pushButton_3_clicked()
         QTextDocument doc ;
         doc.setHtml(str);
         doc.print(&printer);
+
+        //******************************Mailing
         SmtpClient smtp("smtp.gmail.com", 465, SmtpClient::SslConnection);
              smtp.setUser("amaltr21@gmail.com");
              smtp.setPassword("52636447");
@@ -363,7 +375,7 @@ void MainWindow::on_pushButton_3_clicked()
              message.addPart(&text);
              smtp.connectToHost();
              smtp.login();
-            ( smtp.sendMail(message));
+            smtp.sendMail(message);
              smtp.quit();
 }
 
@@ -415,4 +427,78 @@ void MainWindow::on_pushButton_4_clicked()
 }
 
 
+void MainWindow::on_Sonrechech_clicked()
+{//rechercher
+    player->setMedia(QUrl::fromLocalFile("C:/Users/lenovo/Desktop/rechercher.mp3"));
+    player->play();
+}
+
+void MainWindow::on_Sonrechech_2_clicked()
+{//ordonner
+    player->setMedia(QUrl::fromLocalFile("C:/Users/lenovo/Desktop/ordonner.mp3"));
+    player->play();
+}
+
+
+void MainWindow::on_Sonrechech_3_clicked()
+{
+    //ajouter
+
+    player->setMedia(QUrl::fromLocalFile("C:/Users/lenovo/Desktop/ajouter.mp3"));
+    player->play();
+}
+
+void MainWindow::on_Sonrechech_4_clicked()
+{
+    //modifier
+
+    player->setMedia(QUrl::fromLocalFile("C:/Users/lenovo/Desktop/modifier.mp3"));
+    player->play();
+}
+
+
+void MainWindow::on_Sonrechech_5_clicked()
+{
+    //supprimer
+
+    player->setMedia(QUrl::fromLocalFile("C:/Users/lenovo/Desktop/supprimer.mp3"));
+    player->play();
+}
+
+void MainWindow::on_Sonrechech_6_clicked()
+{
+    //rechercher
+
+    player->setMedia(QUrl::fromLocalFile("C:/Users/lenovo/Desktop/rechercher.mp3"));
+    player->play();
+}
+
+void MainWindow::on_Sonrechech_7_clicked()
+{
+    //ordonner
+
+    player->setMedia(QUrl::fromLocalFile("C:/Users/lenovo/Desktop/ordonner.mp3"));
+    player->play();
+}
+void MainWindow::on_Sonrechech_8_clicked()
+{
+    //ajouter
+
+    player->setMedia(QUrl::fromLocalFile("C:/Users/lenovo/Desktop/ajouter.mp3"));
+    player->play();
+}
+void MainWindow::on_Sonrechech_9_clicked()
+{
+    //modifier
+
+    player->setMedia(QUrl::fromLocalFile("C:/Users/lenovo/Desktop/modifier.mp3"));
+    player->play();
+}
+void MainWindow::on_Sonrechech_10_clicked()
+{
+    //supp
+
+    player->setMedia(QUrl::fromLocalFile("C:/Users/lenovo/Desktop/supprimer.mp3"));
+    player->play();
+}
 

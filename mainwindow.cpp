@@ -11,6 +11,9 @@
 #include <QTextDocument>
 #include<SmtpMime>
 #include <QMediaPlayer>
+#include <QtPrintSupport/QPrinter>
+#include <QtPrintSupport/QPrintDialog>
+#include "arduino.h"
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
@@ -104,8 +107,8 @@ void MainWindow::on_suprrimer_clicked()
 
 void MainWindow::on_modifier_clicked()
 {
-    int num=ui -> le_num2 -> text().toInt();
-    QString nom=ui->le_nom2 -> text();
+    int num=ui -> le_num -> text().toInt();
+    QString nom=ui->le_nom -> text();
    Chambres ch (num ,nom);
    bool test=ch.modifier();
     if(test)
@@ -178,8 +181,8 @@ void MainWindow::on_pb_ajouter_2_clicked()
 
 void MainWindow::on_modifier_2_clicked()
 {
-    int num_etage=ui -> le_num2_2 -> text().toInt();
-    QString type =ui->le_type2_2 -> text();
+    int num_etage=ui -> le_num_2 -> text().toInt();
+    QString type =ui->le_type_2 -> text();
    Etages e (num_etage ,type);
    bool test=e.modifier2();
     if(test)
@@ -300,9 +303,9 @@ void MainWindow::on_pushButton_sort_2_clicked()
 
 void MainWindow::on_pushButton_search_clicked()
 {
-    QString text = ui->lineEdit_search_num->text();
+    QString text = ui->le_num->text();
     int num = text.isEmpty()?-1:text.toInt();
-    QString nom = ui->lineEdit_search_nom->text();
+    QString nom = ui->le_nom->text();
    Etmp.setnum(num);
    Etmp.setnom(nom);
    proxyModelEtmp.setSourceModel(Etmp.search());
@@ -315,9 +318,9 @@ void MainWindow::on_pushButton_search_clicked()
 
 void MainWindow::on_pushButton_search_2_clicked()
 {
-    QString text = ui->lineEdit_search_num_2->text();
+    QString text = ui->le_num_2->text();
     int num = text.isEmpty()?-1:text.toInt();
-    QString nom = ui->lineEdit_search_nom_2->text();
+    QString nom = ui->le_type_2->text();
    Et.setnum_etage(num);
    Et.settype(nom);
    proxyModelEt.setSourceModel(Et.search());
@@ -429,13 +432,13 @@ void MainWindow::on_pushButton_4_clicked()
 
 void MainWindow::on_Sonrechech_clicked()
 {//rechercher
-    player->setMedia(QUrl::fromLocalFile("C:/Users/lenovo/Desktop/rechercher.mp3"));
+    player->setMedia(QUrl::fromLocalFile("C:/Users/amal trabelsi/Desktop/Bouraoui mohamed iheb/rechercher.mp3"));
     player->play();
 }
 
 void MainWindow::on_Sonrechech_2_clicked()
 {//ordonner
-    player->setMedia(QUrl::fromLocalFile("C:/Users/lenovo/Desktop/ordonner.mp3"));
+    player->setMedia(QUrl::fromLocalFile("C:/Users/amal trabelsi/Desktop/Bouraoui mohamed iheb/ordonner.mp3"));
     player->play();
 }
 
@@ -444,7 +447,7 @@ void MainWindow::on_Sonrechech_3_clicked()
 {
     //ajouter
 
-    player->setMedia(QUrl::fromLocalFile("C:/Users/lenovo/Desktop/ajouter.mp3"));
+    player->setMedia(QUrl::fromLocalFile("C:/Users/amal trabelsi/Desktop/Bouraoui mohamed iheb/ajouter.mp3"));
     player->play();
 }
 
@@ -452,7 +455,7 @@ void MainWindow::on_Sonrechech_4_clicked()
 {
     //modifier
 
-    player->setMedia(QUrl::fromLocalFile("C:/Users/lenovo/Desktop/modifier.mp3"));
+    player->setMedia(QUrl::fromLocalFile("C:/Users/amal trabelsi/Desktop/Bouraoui mohamed iheb/supprimer.mp3"));
     player->play();
 }
 
@@ -461,7 +464,7 @@ void MainWindow::on_Sonrechech_5_clicked()
 {
     //supprimer
 
-    player->setMedia(QUrl::fromLocalFile("C:/Users/lenovo/Desktop/supprimer.mp3"));
+    player->setMedia(QUrl::fromLocalFile("C:/Users/amal trabelsi/Desktop/Bouraoui mohamed iheb/supprimer.mp3"));
     player->play();
 }
 
@@ -469,7 +472,7 @@ void MainWindow::on_Sonrechech_6_clicked()
 {
     //rechercher
 
-    player->setMedia(QUrl::fromLocalFile("C:/Users/lenovo/Desktop/rechercher.mp3"));
+    player->setMedia(QUrl::fromLocalFile("C:/Users/amal trabelsi/Desktop/Bouraoui mohamed iheb/rechercher.mp3"));
     player->play();
 }
 
@@ -477,28 +480,48 @@ void MainWindow::on_Sonrechech_7_clicked()
 {
     //ordonner
 
-    player->setMedia(QUrl::fromLocalFile("C:/Users/lenovo/Desktop/ordonner.mp3"));
+    player->setMedia(QUrl::fromLocalFile("C:/Users/amal trabelsi/Desktop/Bouraoui mohamed iheb/ordonner.mp3"));
     player->play();
 }
 void MainWindow::on_Sonrechech_8_clicked()
 {
     //ajouter
 
-    player->setMedia(QUrl::fromLocalFile("C:/Users/lenovo/Desktop/ajouter.mp3"));
+    player->setMedia(QUrl::fromLocalFile("C:/Users/amal trabelsi/Desktop/Bouraoui mohamed iheb/ajouter.mp3"));
     player->play();
 }
 void MainWindow::on_Sonrechech_9_clicked()
 {
     //modifier
 
-    player->setMedia(QUrl::fromLocalFile("C:/Users/lenovo/Desktop/modifier.mp3"));
+    player->setMedia(QUrl::fromLocalFile("C:/Users/amal trabelsi/Desktop/Bouraoui mohamed iheb/modifier.mp3"));
     player->play();
 }
 void MainWindow::on_Sonrechech_10_clicked()
 {
     //supp
 
-    player->setMedia(QUrl::fromLocalFile("C:/Users/lenovo/Desktop/supprimer.mp3"));
+    player->setMedia(QUrl::fromLocalFile("C:/Users/amal trabelsi/Desktop/Bouraoui mohamed iheb/supprimer.mp3"));
     player->play();
 }
 
+
+
+void MainWindow::on_pushButton_5_clicked()
+{
+    QPrinter printer;
+    QPrintDialog dialog(&printer, ui->tab);
+    dialog.addEnabledOption(QAbstractPrintDialog::PrintSelection);
+    if (dialog.exec() != QDialog::Accepted) {
+        return;
+}}
+
+void MainWindow::on_pushButton_6_clicked()
+{
+    QPrinter printer;
+    QPrintDialog dialog(&printer, ui->tab);
+    dialog.addEnabledOption(QAbstractPrintDialog::PrintSelection);
+    if (dialog.exec() != QDialog::Accepted) {
+        return;
+}
+}

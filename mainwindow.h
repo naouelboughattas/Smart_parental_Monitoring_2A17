@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 #include "chambres.h"
 #include "etages.h"
+#include "arduino.h"
 #include <QMainWindow>
 #include <QSortFilterProxyModel>
 #include<QPainter>
@@ -69,6 +70,12 @@ private slots:
     void on_Sonrechech_9_clicked();
 
     void on_Sonrechech_10_clicked();
+
+    void on_chambres_clicked();
+
+    void on_pushButton_5_clicked();
+
+    void on_pushButton_6_clicked();
 
 private:
     Ui::MainWindow *ui;

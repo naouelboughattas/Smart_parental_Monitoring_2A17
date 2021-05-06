@@ -14,8 +14,10 @@ QT       += core network
 TARGET = SMTPEmail
 #pdf
 QT += core gui sql axcontainer printsupport
+#arduino
+QT += serialport
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
-
+TRANSLATIONS += QtLanguage_ru.ts
 TARGET = Atelier_Connexion
 TEMPLATE = app
 DEFINES += SMTP_BUILD
@@ -37,6 +39,7 @@ QMAKE_LFLAGS += -static-libgcc
 QMAKE_LFLAGS += -static-libstdc++
 
 SOURCES += \
+    arduino.cpp \
     chambres.cpp \
     emailaddress.cpp \
     etages.cpp \
@@ -57,6 +60,7 @@ SOURCES += \
 
 
 HEADERS += \
+    arduino.h \
     chambres.h \
     emailaddress.h \
     etages.h \
@@ -83,4 +87,7 @@ FORMS += \
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+RESOURCES += \
+    traduction.qrc
 

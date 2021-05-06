@@ -9,15 +9,19 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    QPixmap pix("C:/Users/Sémia/Desktop/3.jpg");
+    QPixmap pix("C:/Users/Sémia/Documents/Smart_parental_Monitoring_2A17/EzzaouiaSemia/fichierSemia/3.jpg");
     ui->label_19->setPixmap(pix);
-    QFile file("C:/Users/Sémia/Desktop/Historique.txt");
+
+
+    QFile file("C:/Users/Sémia/Documents/Smart_parental_Monitoring_2A17/EzzaouiaSemia/fichierSemia/Historique.txt");
    if (!file.open(QIODevice::ReadOnly))
    {
        QMessageBox::information(0,"info",file.errorString());
    }
    QTextStream in (&file);
   ui->textBrowser->setText(in.readAll());
+
+
     ui->tableView->setModel(tmpen.afficher());
      ui->tableView_2->setModel(tmpde.afficher());
      QPieSeries *series = new QPieSeries();
@@ -93,7 +97,7 @@ void MainWindow::on_pushButton_3_clicked()
     QString niveau=ui->lineEdit_niveau->text();
     devoir d(id,matiere,niveau);
     bool test=d.ajouter();
-    QFile file("C:/Users/Sémia/Desktop/Historique.txt");//declaration d'un fichier
+    QFile file("C:/Users/Sémia/Documents/Smart_parental_Monitoring_2A17/EzzaouiaSemia/fichierSemia/Historique.txt");//declaration d'un fichier
             if(!file.open(QIODevice::WriteOnly | QIODevice::Append | QIODevice::Text))
                 return;
 
@@ -101,11 +105,9 @@ void MainWindow::on_pushButton_3_clicked()
     if(test)
     {
 
-
-
         QString message2="Vous avez ajouté un devoir\n";
             cout << message2;
-            QFile file("C:/Users/Sémia/Desktop/Historique.txt");
+            QFile file("C:/Users/Sémia/Documents/Smart_parental_Monitoring_2A17/EzzaouiaSemia/fichierSemia/Historique.txt");
            if (!file.open(QIODevice::ReadOnly))
            {
                QMessageBox::information(0,"info",file.errorString());
@@ -305,17 +307,17 @@ void MainWindow::on_pushButton_13_clicked()
 {
     if(ui->comboBox_4->currentText()=="Background 1")
     {
-        QPixmap pix("C:/Users/Sémia/Desktop/1.jpg");
+        QPixmap pix("C:/Users/Sémia/Documents/Smart_parental_Monitoring_2A17/EzzaouiaSemia/fichierSemia/1.jpg");
         ui->label_19->setPixmap(pix);
     }
     if(ui->comboBox_4->currentText()=="Background 2")
     {
-        QPixmap pix("C:/Users/Sémia/Desktop/2.jpg");
+        QPixmap pix("C:/Users/Sémia/Documents/Smart_parental_Monitoring_2A17/EzzaouiaSemia/fichierSemia/2.jpg");
         ui->label_19->setPixmap(pix);
     }
     if(ui->comboBox_4->currentText()=="Background 3")
     {
-        QPixmap pix("C:/Users/Sémia/Desktop/3.jpg");
+        QPixmap pix("C:/Users/Sémia/Documents/Smart_parental_Monitoring_2A17/EzzaouiaSemia/fichierSemia/3.jpg");
         ui->label_19->setPixmap(pix);
     }
 }

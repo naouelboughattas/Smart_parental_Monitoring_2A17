@@ -180,11 +180,11 @@ void InterEtat::on_recherche_cursorPositionChanged(int arg1, int arg2)
 
 void InterEtat::sendMail()
 {
-    Smtp* smtp = new Smtp("saanoun.mokhtar@esprit.tn", "esprit1234567", "smtp.gmail.com", 465);
+    Smtp* smtp = new Smtp("", "", "smtp.gmail.com", 465);
     connect(smtp, SIGNAL(status(QString)), this, SLOT(mailSent(QString)));
 
 
-    smtp->sendMail("saanoun.mokhtar@esprit.tn", "saanoun.mokhtar@esprit.tn" ," AJOUTER","ETAT ajouter");
+    smtp->sendMail("wajih.mejri@esprit.tn", "wajih.mejri@esprit.tn" ," objet test","Reservatuin ajouter");
 }
 
 void InterEtat::mailSent(QString status)

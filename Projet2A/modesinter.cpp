@@ -46,8 +46,15 @@ void modesinter::on_AjouterBouton_clicked()
     bool test = mod.ajouter();
     if(test)
 {
-        QMessageBox::information(nullptr, QObject::tr("Ajouter un mode"),
-        QObject::tr("Mode ajouté.\n" "Click Cancel to exit."), QMessageBox::Cancel);
+        //NOTIFICATION
+        trayIcon = new QSystemTrayIcon(this);
+        trayIcon->setVisible(true);
+        trayIcon->setIcon(this->style()->standardIcon(QStyle::SP_DesktopIcon));
+        trayIcon->setToolTip("Ajouter" "\n"
+                        "Ajouter avec sucées");
+        trayIcon->showMessage("Ajouter","Ajouter avec sucées",QSystemTrayIcon::Information,1500);
+        trayIcon->show();
+
 
         }
           else
@@ -189,10 +196,17 @@ void modesinter::on_ModifierBouton_clicked()
         {
             //refresh combobox + tableau
             refresh();
-            //message
-            QMessageBox::information(this, QObject::tr("Modifier un mode"),
-                        QObject::tr("Mode Modifier.\n"
-                                    "Click Cancel to exit."), QMessageBox::Cancel);
+
+            //NOTIFICATION
+            trayIcon = new QSystemTrayIcon(this);
+            trayIcon->setVisible(true);
+            trayIcon->setIcon(this->style()->standardIcon(QStyle::SP_DesktopIcon));
+            trayIcon->setToolTip("Modifier" "\n"
+                            "Modifier avec sucées");
+            trayIcon->showMessage("Modifier","Modifier avec sucées",QSystemTrayIcon::Warning,1500);
+            trayIcon->show();
+
+
         }
         else
         {
@@ -220,11 +234,15 @@ void modesinter::on_SupprimerBouton_clicked()
         {
             //refresh combobox + tableau
             refresh();
+            //NOTIFICATION
+            trayIcon = new QSystemTrayIcon(this);
+            trayIcon->setVisible(true);
+            trayIcon->setIcon(this->style()->standardIcon(QStyle::SP_DesktopIcon));
+            trayIcon->setToolTip("Supprimer" "\n"
+                            "Supprimer avec sucées");
+            trayIcon->showMessage("Supprimer","Supprimer avec sucées",QSystemTrayIcon::Warning,1500);
+            trayIcon->show();
 
-            //message
-            QMessageBox::information(this, QObject::tr("Supprimer un mode"),
-                        QObject::tr("Mode supprimé.\n"
-                                    "Click Cancel to exit."), QMessageBox::Cancel);
         }
         else
         {

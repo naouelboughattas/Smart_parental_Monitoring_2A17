@@ -4,6 +4,7 @@
 #include <QDialog>
 #include "modes.h"
 #include "etat.h"
+#include <QSystemTrayIcon>
 
 namespace Ui {
 class modesinter;
@@ -40,6 +41,8 @@ private:
     modes tmpmodes;
     Etat tmpetat;
     Ui::modesinter *ui;
+    QSystemTrayIcon * trayIcon;
+
 };
 
 #endif // MODESINTER_H

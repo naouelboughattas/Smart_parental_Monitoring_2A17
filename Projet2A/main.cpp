@@ -1,13 +1,14 @@
-#include "mainwindow.h"
+#include "menu.h"
 #include <QApplication>
 #include <QMessageBox>
 #include "connection.h"
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    MainWindow w;
     Connection c;
     bool test=c.ouvrirConnexion();
+    Menu w;
+
     if(test)
     {
         w.show();/*

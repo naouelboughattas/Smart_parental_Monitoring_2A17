@@ -32,8 +32,6 @@ private slots:
 
     void on_modifier_clicked();
 
-    void on_lineEdit_cursorPositionChanged(int arg1, int arg2);
-
     void on_recherche_cursorPositionChanged(int arg1, int arg2);
 
     void sendMail();
